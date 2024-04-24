@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  haushut:
+    build: .
+    image: haushut:latest
+    container_name: haushut_container
+    mem_reservation: 1gb
+    ports:
+      - "4201:80"
+    networks:
+      - haushut_ntw
+
+networks:
+  haushut_ntw:
